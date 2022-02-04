@@ -19,41 +19,41 @@ function computerPlay() {
 
 let userScore = 0;
 let computerScore = 0;
-playerScore.textContent = "Player Score: " + userScore;
-compScore.textContent = "Computer Score: " + computerScore;
+playerScore.textContent = userScore;
+compScore.textContent = computerScore;
 
 function playRound(playerSelection, computerSelection) {
     
      if ((playerSelection == "rock") && (computerSelection == "paper")) {
-        para.textContent = "You Lose. Paper beats rock.";
+        para.textContent = "Silly human. Paper beats rock.";
         para.setAttribute('id', 'roundResult');
         results.append(para);
-        compScore.textContent = "Computer Score: " + ++computerScore;
+        compScore.textContent = ++computerScore;
     } else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
-        para.textContent = "You Win. Rock beats scissors.";
+        para.textContent = "You Win this round. Rock beats scissors.";
         para.setAttribute('id', 'roundResult');
         results.append(para);
-        playerScore.textContent = "Player Score: " + ++userScore;
+        playerScore.textContent = ++userScore;
     } else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
-        para.textContent = "You Lose. Scissors beats paper.";
+        para.textContent = "Pathetic. Scissors beats paper.";
         para.setAttribute('id', 'roundResult');
         results.append(para);
-        compScore.textContent = "Computer Score: " + ++computerScore;
+        compScore.textContent = ++computerScore;
     } else if ((playerSelection == "paper") && (computerSelection == "rock")) {
-        para.textContent = "You Win. Paper beats rock.";
+        para.textContent = "You can have this one. Paper beats rock.";
         para.setAttribute('id', 'roundResult');
         results.append(para);
-        playerScore.textContent = "Player Score: " + ++userScore;
+        playerScore.textContent = ++userScore;
     } else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
-        para.textContent = "You Win. Scissors beats paper.";
+        para.textContent = "I let you win this round. Scissors beats paper.";
         para.setAttribute('id', 'roundResult');
         results.append(para);
-        playerScore.textContent = "Player Score: " + ++userScore;
+        playerScore.textContent = ++userScore;
     } else if ((playerSelection == "scissors") && (computerSelection == "rock")) {
-        para.textContent = "You Lose. Rock beats scissors.";
+        para.textContent = "Inferior. Rock beats scissors.";
         para.setAttribute('id', 'roundResult');
         results.append(para);
-        compScore.textContent = "Computer Score: " + ++computerScore;
+        compScore.textContent = ++computerScore;
     } else if (playerSelection === computerSelection) {
         para.textContent = "It's a Tie!";
         para.setAttribute('id', 'roundResult');
@@ -61,56 +61,18 @@ function playRound(playerSelection, computerSelection) {
     } else {
         return "Please enter rock, paper, or scissors";
     }
-    if (userScore === 5 || computerScore === 5) {
-        if (userScore === 5) {
-            para.textContent = `You Win the Game ${userScore} to ${computerScore}`;
-            finalResult.append(para);
-            buttons.forEach((button) => {
-                button.disabled = true;
-            });
-        } else {
-            para.textContent = `You Lose the Game ${userScore} to ${computerScore}`;
-            buttons.forEach((button) => {
-                button.disabled = true;
-            });
-            finalResult.append(para);
-        }
-    }
-}
-
-if (userScore === 5 || computerScore === 5) {
+    
     if (userScore === 5) {
-        para.textContent = "You Win the Game ", userScore, " to ", computerScore;
+        para.textContent = `You Win the game ${userScore} to ${computerScore}. Refresh to play again.`;
         finalResult.append(para);
-        document.buttons.disabled = true;
-    } else {
-        para.textContent = "You Lose the Game ", userScore, " to ", computerScore;
-        document.buttons.disabled = true;
+        buttons.forEach((button) => {
+            button.disabled = true;
+        });
+    } else if (computerScore === 5) {
+        para.textContent = `You Lose the game ${userScore} to ${computerScore}. Refresh to play again.`;
         finalResult.append(para);
-    }
+        buttons.forEach((button) => {
+            button.disabled = true;
+        });
+    }  
 }
-
-function game() {
-    let userScore = 0;
-    let computerScore = 0;
-   for (round = 0; round < 5; round++) {
-       let result = playRound(playerSelection, computerSelection);
-       if (result.slice(0, 7) === "You Win") {
-           userScore++;
-       } else if (result.slice(0, 8) === "You Lose") {
-           computerScore++;
-       }
-        para.textContent = result;
-        para.setAttribute('id', 'roundResult');
-        results.append(para);
-   }
-   if (userScore > computerScore) {
-       console.log("You Win the Game ", userScore, " to ", computerScore);
-   } else if (userScore < computerScore) {
-       console.log("You Lose the Game ", userScore, " to ", computerScore);
-   } else if (userScore === computerScore) {
-       console.log("Tie Game!");
-   }
-}
-
-// game();

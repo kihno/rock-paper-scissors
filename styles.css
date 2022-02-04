@@ -1,5 +1,45 @@
+body {
+    background-color: black;
+    color: #00ff41;
+    font-family: "Courier New", monospace;
+}
 
+h1 {
+    text-align: center;
+}
 
 p {
-    display: block;
+    text-align: center;
+}
+
+#scoreContainer{
+display: flex;
+justify-content: center;
+}
+
+#psContainer,
+#csContainer {
+    width: 150px;
+    height: 250px;
+    border: 1px solid #00ff41;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+#playerScore,
+#computerScore {
+    font-size: 150px;
+}
+
+#btnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.result {
+    text-align: center;
 }

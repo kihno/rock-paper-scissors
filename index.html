@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" defer></script>
-    <title>Document</title>
-</head>
-<body>
-    <h1>Rock Paper Scissors</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="javascript.js" defer></script>
+        <title>roshambo</title>
+    </head>
+    <body>
+        <h1>roshambo</h1>
 
-    <div id="container">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id ="scissors">Scissors</button>
-    </div>
+        <div id="scoreContainer">
+            <div id="psContainer">
+                <div id="playerScore"></div>
+                <p>Player Score</p>
+            </div>
+            <div id="csContainer">
+                <div id="computerScore"></div>
+                <p>Computer Score</p>
+            </div>
+        </div>
 
-    <div id="playerScore"></div>
-    <div id="computerScore"></div>
-    <div id="results"></div>
-    <div id="finalResult"></div>
-</body>
+        <p>Choose Your Weapon</p>
+        <div id="btnContainer">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id ="scissors">Scissors</button>
+        </div>
+
+        <div id="results" class="result"></div>
+        <div id="finalResult" class="result"></div>
+
+    </body>
 </html>
