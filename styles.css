@@ -20,7 +20,7 @@ justify-content: center;
 #psContainer,
 #csContainer {
     width: 150px;
-    height: 250px;
+    height: 220px;
     border: 1px solid #00ff41;
     border-radius: 5px;
     display: flex;
@@ -35,11 +35,35 @@ justify-content: center;
     font-size: 150px;
 }
 
+#weapon {
+    font-size: 20px;
+}
+
 #btnContainer {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    height: 180px;
+    margin-top: 50px;
+}
+
+input {
+    width: 100px;
+    padding: 10px 30px 10px 30px;
+}
+
+
+input:hover {
+    width: 120px;
+    cursor: pointer;
+}
+
+input:disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .result {
     text-align: center;
+    font-size: 25px;
 }
