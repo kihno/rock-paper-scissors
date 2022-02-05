@@ -4,8 +4,29 @@ body {
     font-family: "Courier New", monospace;
 }
 
-h1 {
-    text-align: center;
+@keyframes blink {
+    from {background-color: #00ff41;}
+    to {background-color: black;}
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+
+#box {
+    height: 25px;
+    width: 14px;
+    background-color: #00ff41;
+    margin-right: 2px;
+    animation: blink 0.6s cubic-bezier(1,-0.01, 0, 1.01) 0s infinite;
+}
+
+#titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 p {
@@ -66,4 +87,23 @@ input:disabled {
 .result {
     text-align: center;
     font-size: 25px;
+}
+
+#playAgain {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#btnRefresh {
+    background-color: black;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+#btnRefresh:hover {
+    box-shadow: 0 0 0.5rem lightgrey;
+    cursor: pointer;
 }

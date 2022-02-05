@@ -1,5 +1,7 @@
 const para = document.createElement('p');
+const btn = document.createElement('button');
 const results = document.querySelector('#results');
+const playAgain = document.querySelector('#playAgain');
 const compScore = document.querySelector('#computerScore');
 const playerScore = document.querySelector('#playerScore');
 const finalResult = document.querySelector('#finalResult');
@@ -79,16 +81,26 @@ function playRound(playerSelection, computerSelection) {
     }
     
     if (userScore === 5) {
-        para.textContent = `You Win the game ${userScore} to ${computerScore}. Refresh to play again.`;
-        finalResult.append(para);
+        para.textContent = `You Win the game ${userScore} to ${computerScore}.`;
+        results.append(para);
         buttons.forEach((button) => {
             button.disabled = true;
         });
     } else if (computerScore === 5) {
-        para.textContent = `You Lose the game ${userScore} to ${computerScore}. Refresh to play again.`;
-        finalResult.append(para);
+        para.textContent = `You Lose the game ${userScore} to ${computerScore}.`;
+        results.append(para);
         buttons.forEach((button) => {
             button.disabled = true;
         });
     }  
 }
+
+// Refresh button
+function refresh() {
+    window.location.reload('Refresh')
+};
+
+const btnRefresh = document.querySelector('#btnRefresh');
+btnRefresh.addEventListener('click', () => {
+    refresh()
+});

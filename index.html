@@ -9,7 +9,10 @@
         <title>roshambo</title>
     </head>
     <body>
-        <h1>roshambo</h1>
+        <div id="titleContainer">
+            <div id="box"></div>
+            <h1>roshambo</h1>
+        </div>
 
         <div id="scoreContainer">
             <div id="psContainer">
@@ -22,7 +25,7 @@
             </div>
         </div>
 
-        <p id="weapon">Choose Your Weapon</p>
+        <p id="weapon">Choose Your Weapon:</p>
         <div id="btnContainer">
             <input id="rock" type="image" src="images/rock.png" alt="Rock">
             <input id="paper" type="image" src="images/paper.png" alt="Paper">
@@ -33,7 +36,10 @@
         </div>
 
         <div id="results" class="result"></div>
-        <div id="finalResult" class="result"></div>
+
+        <div id="playAgain">
+            <button id="btnRefresh">Play Again</button>
+        </div>
 
     </body>
 </html>
