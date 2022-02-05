@@ -19,14 +19,23 @@ body {
     height: 25px;
     width: 14px;
     background-color: #00ff41;
-    margin-right: 2px;
+    
     animation: blink 0.6s cubic-bezier(1,-0.01, 0, 1.01) 0s infinite;
 }
 
 #titleContainer {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: baseline;
+}
+
+h1{
+    overflow: hidden;
+    border-right: 10px solid #00ff41;
+    line-height: 23px;
+    white-space: nowrap;
+    animation: typing 1s forwards;
+    width: 0;
 }
 
 p {
@@ -72,7 +81,6 @@ input {
     width: 100px;
     padding: 10px 30px 10px 30px;
 }
-
 
 input:hover {
     width: 120px;
