@@ -1,0 +1,47 @@
+[33mcommit 1efb98554f6fb272c07baa6ac54a3375a2747105[m[33m ([m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: kihno <stistyle13@gmail.com>
+Date:   Mon Feb 7 11:39:17 2022 -0800
+
+    finalized typewriter effect on h1 and finalized dynamically created refresh button
+
+[33mcommit a0e930ebcc47db27761e52326e42b5516096f898[m
+Author: kihno <stistyle13@gmail.com>
+Date:   Fri Feb 4 17:55:36 2022 -0800
+
+    added refresh button and animated blinking box in title
+
+[33mcommit 46d40bea8d765c07a333c7ce46cfc6c0a5f58ae8[m
+Author: kihno <stistyle13@gmail.com>
+Date:   Fri Feb 4 14:37:46 2022 -0800
+
+    added rps icon buttons and styling and updated robotisms
+
+[33mcommit 3c138371adcd9b470303187828580d151c3724cb[m
+Author: kihno <stistyle13@gmail.com>
+Date:   Fri Feb 4 11:35:51 2022 -0800
+
+    edited styles with flexbox and positioned score cards
+
+[33mcommit 3fe7f553de39396ff7bd2602042d90d8588ab403[m
+Author: kihno <stistyle13@gmail.com>
+Date:   Thu Feb 3 17:13:42 2022 -0800
+
+    game runs until a player reaches a score of 5
+
+[33mcommit 5ea1213839a7c4cc8a37a9b18dc7487ab769df83[m
+Author: kihno <stistyle13@gmail.com>
+Date:   Thu Feb 3 13:16:32 2022 -0800
+
+    buttons work as user input and result is console logged
+
+[33mcommit ec9e93253422686d009fa6cbd33f7003571b9fe8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: kihno <stistyle13@gmail.com>
+Date:   Wed Jan 26 12:50:33 2022 -0800
+
+    Finished gmae() function to play 5 rounds and log winner
+
+[33mcommit dc90127acab68d858e3990881d3f306a3ca348a1[m
+Author: kihno <stistyle13@gmail.com>
+Date:   Tue Jan 25 13:09:09 2022 -0800
+
+    completed javascript function for playRound

@@ -1,60 +1,3 @@
-<<<<<<< HEAD
-function computerPlay() {
-    const selectionArray = ['rock', 'paper', 'scissors'];
-    let selection = selectionArray[Math.floor(Math.random() * selectionArray.length)];
-    return selection;
-}
-
-let computerSelection;
-let playerSelection;
-
-function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("rock, paper, or scissors?");
-    computerSelection = computerPlay();
-     if ((playerSelection === "rock") && (computerSelection == "paper")) {
-        return "You Lose. Paper beats rock.";
-    } else if ((playerSelection === "rock") && (computerSelection == "scissors")) {
-        return "You Win. Rock beats scissors.";
-    } else if ((playerSelection === "paper") && (computerSelection == "scissors")) {
-        return "You Lose. Scissors beats paper.";
-    } else if ((playerSelection === "paper") && (computerSelection == "rock")) {
-        return "You Win. Paper beats rock.";
-    } else if ((playerSelection === "scissors") && (computerSelection == "paper")) {
-        return "You Win. Scissors beats paper.";
-    } else if ((playerSelection === "scissors") && (computerSelection == "rock")) {
-        return "You Lose. Rock beats scissors.";
-    } else if (playerSelection === computerSelection) {
-        return "It's a Tie!";
-    } else {
-        alert("Please enter rock, paper, or scissors");
-    }
-}
-
-
-
-function game() {
-    let userScore = 0;
-    let computerScore = 0;
-   for (round = 0; round < 5; round++) {
-       let result = playRound(playerSelection, computerSelection);
-       if (result.slice(0, 7) === "You Win") {
-           userScore++;
-       } else if (result.slice(0, 8) === "You Lose") {
-           computerScore++;
-       }
-       console.log(result);
-   }
-   if (userScore > computerScore) {
-       console.log("You Win the Game ", userScore, " to ", computerScore);
-   } else if (userScore < computerScore) {
-       console.log("You Lose the Game ", userScore, " to ", computerScore);
-   } else if (userScore === computerScore) {
-       console.log("Tie Game!");
-   }
-}
-
-game();
-=======
 // Variables
 const para = document.createElement('p');
 const btn = document.createElement('button');
@@ -172,4 +115,3 @@ playAgain.addEventListener('click', function (e) {
         refresh();
     }
 });
->>>>>>> rps-ui
