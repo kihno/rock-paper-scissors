@@ -72,8 +72,8 @@ justify-content: center;
 }
 
 @media screen and (max-width: 800px) {
-    #btnContainer {
-        width: 100vw;
+    body {
+        height: 100vh;
     }
 }
 

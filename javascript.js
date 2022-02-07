@@ -82,7 +82,7 @@ function playRound(playerSelection, computerSelection) {
     }
     
     if (userScore === 5) {
-        para.textContent = `You Win the game ${userScore} to ${computerScore}.`;
+        para.textContent = `You win the game ${userScore} to ${computerScore}.`;
         results.append(para);
         buttons.forEach((button) => {
             button.disabled = true;
@@ -93,7 +93,7 @@ function playRound(playerSelection, computerSelection) {
         playAgain.append(btn);
 
     } else if (computerScore === 5) {
-        para.textContent = `You Lose the game ${userScore} to ${computerScore}.`;
+        para.textContent = `You lose the game ${userScore} to ${computerScore}.`;
         results.append(para);
         buttons.forEach((button) => {
             button.disabled = true;
