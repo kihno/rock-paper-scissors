@@ -1,3 +1,4 @@
+// Variables
 const para = document.createElement('p');
 const btn = document.createElement('button');
 const results = document.querySelector('#results');
@@ -86,12 +87,21 @@ function playRound(playerSelection, computerSelection) {
         buttons.forEach((button) => {
             button.disabled = true;
         });
+
+        btn.textContent = 'Play Again';
+        btn.setAttribute('class', 'btnRefresh');
+        playAgain.append(btn);
+
     } else if (computerScore === 5) {
         para.textContent = `You Lose the game ${userScore} to ${computerScore}.`;
         results.append(para);
         buttons.forEach((button) => {
             button.disabled = true;
         });
+
+        btn.textContent = 'Play Again';
+        btn.setAttribute('class', 'btnRefresh');
+        playAgain.append(btn);
     }  
 }
 
@@ -100,7 +110,8 @@ function refresh() {
     window.location.reload('Refresh')
 };
 
-const btnRefresh = document.querySelector('#btnRefresh');
-btnRefresh.addEventListener('click', () => {
-    refresh()
+playAgain.addEventListener('click', function (e) {
+    if (e.target.classList.contains('btnRefresh')) {
+        refresh();
+    }
 });
