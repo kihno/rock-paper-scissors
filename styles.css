@@ -1,0 +1,111 @@
+body {
+    background-color: black;
+    color: #00ff41;
+    font-family: "Courier New", monospace;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent}
+    50% { border-color: #00ff41;}
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+#titleContainer {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1{
+    overflow: hidden;
+    border-right: 13px solid #00ff41;
+    line-height: 23px;
+    white-space: nowrap;
+    animation: typing 1s steps(7, end) forwards,
+        blink .7s step-end infinite;
+    width: 0;
+    margin-left: -10px;
+}
+
+p {
+    text-align: center;
+}
+
+#scoreContainer{
+display: flex;
+justify-content: center;
+}
+
+#psContainer,
+#csContainer {
+    width: 150px;
+    height: 220px;
+    border: 1px solid #00ff41;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 70px 10px 10px 10px;
+}
+
+#playerScore,
+#computerScore {
+    font-size: 150px;
+}
+
+#weapon {
+    font-size: 20px;
+}
+
+#btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 180px;
+    margin-top: 50px;
+}
+
+input {
+    width: 100px;
+    padding: 10px 30px 10px 30px;
+}
+
+input:hover {
+    width: 120px;
+    cursor: pointer;
+}
+
+input:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.result {
+    text-align: center;
+    font-size: 25px;
+}
+
+#playAgain {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.btnRefresh {
+    background-color: black;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.btnRefresh:hover {
+    box-shadow: 0 0 0.5rem #00ff41;
+    cursor: pointer;
+}
