@@ -71,6 +71,12 @@ justify-content: center;
     margin-top: 50px;
 }
 
+@media screen and (max-width: 800px) {
+    #btnContainer {
+        width: 100vw;
+    }
+}
+
 input {
     width: 100px;
     padding: 10px 30px 10px 30px;
