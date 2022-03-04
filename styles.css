@@ -76,7 +76,8 @@ justify-content: center;
 
 @media screen and (max-width: 800px) {
     body {
-        height: 100vh;
+        width: 104vw;
+     
     }
 }
 
