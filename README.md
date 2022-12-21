@@ -6,7 +6,7 @@ https://kihno.github.io/rock-paper-scissors/
 
 ## Description
 
-A Rock-Paper-Scissors game build with vanilla javascript.
+A Rock-Paper-Scissors game built with vanilla javascript.
 
 ## Built With
 
